@@ -1,0 +1,15 @@
+limit = 50
+n = 2
+
+while n <= limit:
+    d = 2
+    prime = 1
+    while d < n:
+        rest = n
+        while d <= rest:
+            rest = rest - d
+        prime = prime * (0 < rest)
+        d = d + 1
+    if prime == 1:
+        out(n)
+    n = n + 1

@@ -1,0 +1,51 @@
+y = 0 - 9
+
+while y <= 9:
+    x = 0 - 24
+    while x <= 16:
+        zr = 0
+        zi = 0
+        i = 0
+        escaped = 0
+
+        while i < 16:
+            if 256 < zr * zr + zi * zi:
+                escaped = i
+                i = 16
+            else:
+                value = zr * zr - zi * zi
+                q = 0
+                if 0 <= value:
+                    while 8 <= value:
+                        value = value - 8
+                        q = q + 1
+                else:
+                    while value <= 0 - 8:
+                        value = value + 8
+                        q = q - 1
+
+                value = 2 * zr * zi
+                zr = q + x
+                q = 0
+                if 0 <= value:
+                    while 8 <= value:
+                        value = value - 8
+                        q = q + 1
+                else:
+                    while value <= 0 - 8:
+                        value = value + 8
+                        q = q - 1
+                zi = q + y
+
+                i = i + 1
+
+        out(32
+            + (0 < escaped) * (14
+               + (3 <= escaped) * (12
+                  + (6 <= escaped) * (0 - 16
+                     + (10 <= escaped) * (0 - 7)))))
+
+        x = x + 1
+
+    out(10)
+    y = y + 1

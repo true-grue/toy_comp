@@ -1,0 +1,36 @@
+size = 27
+y = 0
+
+while y < size:
+    x = 0
+    while x < size:
+        xx = x
+        yy = y
+        hole = 0
+        digit = 0
+
+        while digit < 3:
+            rx = xx
+            qx = 0
+            while 3 <= rx:
+                rx = rx - 3
+                qx = qx + 1
+
+            ry = yy
+            qy = 0
+            while 3 <= ry:
+                ry = ry - 3
+                qy = qy + 1
+
+            hole = hole + (1 - hole) * (rx == 1) * (ry == 1)
+
+            xx = qx
+            yy = qy
+            digit = digit + 1
+
+        out(35 - 3 * hole)
+
+        x = x + 1
+
+    out(10)
+    y = y + 1
