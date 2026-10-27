@@ -17,7 +17,7 @@
 Подмножество Python, разбор с помощью модуля `ast`.
 
 ```bnf
-<program>     ::= <block>*
+<program>     ::= <block>
 <block>       ::= <statement>*
 <statement>   ::= <assign>
                 | <out>
